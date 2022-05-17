@@ -1,0 +1,58 @@
+/*1. Морфинг. done
+2. Движение по траектории.
+3. Использование маски.*/
+body{
+    background-color: rgb(255, 253, 249);
+}
+
+.menu{
+    display: flex;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.menu li{
+    width: 200px;
+
+    list-style: none;
+    background-color: blanchedalmond;
+    position: relative;
+}
+.menu a{
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 10px 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+.menu a:hover{
+    background: rgb(255, 197, 111);
+}
+
+.menu ul{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top:100%;
+    display: none;
+    padding: 0;
+}
+
+.menu li:hover ul{
+    display: block;
+}
+
+h1{text-align: center;}
+
+h2{
+    text-align: center;
+    font-weight: lighter;
+}
+h3{
+    text-align: center;
+    font-weight: lighter;
+}

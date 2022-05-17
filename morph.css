@@ -1,0 +1,115 @@
+.menu{
+    display: flex;
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.menu li{
+    width: 200px;
+
+    list-style: none;
+    background-color: blanchedalmond;
+    position: relative;
+}
+.menu a{
+    color: black;
+    display: block;
+    text-align: center;
+    padding: 10px 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+.menu a:hover{
+    background: rgb(255, 197, 111);
+}
+
+.menu ul{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top:100%;
+    display: none;
+    padding: 0;
+}
+
+.menu li:hover ul{
+    display: block;
+    z-index: 999;
+}
+
+.morph{
+    margin-top:150px;
+    margin-left:400px;
+    width: 200px; 
+    height: 200px; 
+    background-color: bisque;
+    border-radius: 60%;
+    transform: rotate(45deg);
+    position: relative; 
+    animation-name: morphTransform;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.morph::before{
+    content : '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    border-radius: 50%; 
+    position: absolute;
+    animation-name: firstHeart;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.morph::after{
+    content : '';
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+    border-radius: 50%; 
+    position: absolute;
+    animation-name: secondHeart;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes morphTransform{
+    100%{
+        border-radius: 1%;
+        background-color: rgb(195, 21, 21);
+    }
+}
+
+@keyframes firstHeart{
+    0%{
+        top: 0px;
+        left: 0;
+    }
+
+    100%{
+        top: -100px;
+        left: 0;
+        background-color: rgb(195, 21, 21);
+    }
+}
+
+@keyframes secondHeart{
+    0%{
+        top: 0;
+        left: 0; 
+    }
+
+    100%{
+        top: 0;
+        left: -100px; 
+        background-color: rgb(195, 21, 21);
+    }
+}
